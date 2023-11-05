@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1:4306
--- Generation Time: Nov 02, 2023 at 10:21 PM
+-- Generation Time: Nov 06, 2023 at 12:49 AM
 -- Server version: 10.4.28-MariaDB
 -- PHP Version: 8.2.4
 
@@ -45,6 +45,15 @@ CREATE TABLE `artists` (
   `Location_id` int(11) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
+--
+-- Dumping data for table `artists`
+--
+
+INSERT INTO `artists` (`Artist_id`, `Name`, `Location_id`) VALUES
+(1, 'wizkd', NULL),
+(2, 'jayz', NULL),
+(3, 'Burna', NULL);
+
 -- --------------------------------------------------------
 
 --
@@ -53,8 +62,8 @@ CREATE TABLE `artists` (
 
 CREATE TABLE `customers` (
   `Customer_id` int(11) NOT NULL,
-  `Last_Name` varchar(50) DEFAULT NULL,
-  `First_Name` varchar(50) DEFAULT NULL,
+  `LastName` varchar(50) DEFAULT NULL,
+  `FirstName` varchar(50) DEFAULT NULL,
   `Company` varchar(50) DEFAULT NULL,
   `Phone` varchar(50) DEFAULT NULL,
   `Email` varchar(50) DEFAULT NULL,
@@ -70,8 +79,8 @@ CREATE TABLE `customers` (
 
 CREATE TABLE `employee` (
   `Employee_id` int(11) NOT NULL,
-  `Last_Name` varchar(50) DEFAULT NULL,
-  `First_Name` varchar(50) DEFAULT NULL,
+  `LastName` varchar(50) DEFAULT NULL,
+  `FirstName` varchar(50) DEFAULT NULL,
   `Title` varchar(50) DEFAULT NULL,
   `ReportsTo` int(11) DEFAULT NULL,
   `BirthDate` date DEFAULT NULL,
@@ -113,7 +122,7 @@ CREATE TABLE `location` (
 
 CREATE TABLE `tracks` (
   `Track_id` int(11) NOT NULL,
-  `Names` varchar(50) DEFAULT NULL,
+  `Name` varchar(50) DEFAULT NULL,
   `Album_id` int(11) DEFAULT NULL,
   `UnitPrice` decimal(10,0) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
