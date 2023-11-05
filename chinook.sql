@@ -70,8 +70,8 @@ CREATE TABLE `customers` (
 
 CREATE TABLE `employee` (
   `Employee_id` int(11) NOT NULL,
-  `LastName` varchar(50) DEFAULT NULL,
-  `FirstName` varchar(50) DEFAULT NULL,
+  `Last_Name` varchar(50) DEFAULT NULL,
+  `First_Name` varchar(50) DEFAULT NULL,
   `Title` varchar(50) DEFAULT NULL,
   `ReportsTo` int(11) DEFAULT NULL,
   `BirthDate` date DEFAULT NULL,
@@ -113,7 +113,7 @@ CREATE TABLE `location` (
 
 CREATE TABLE `tracks` (
   `Track_id` int(11) NOT NULL,
-  `Name` varchar(50) DEFAULT NULL,
+  `Names` varchar(50) DEFAULT NULL,
   `Album_id` int(11) DEFAULT NULL,
   `UnitPrice` decimal(10,0) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
